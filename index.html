@@ -28,8 +28,27 @@
     <div ng-controller="BoardCtrl">
       <button class="btn btn-warning" ng-click="TimerFactory.playSoundtrack()" name="Music">Music</button>
 
-      <button class="btn btn-success" id="timerStart" ng-click="showme=true; TimerFactory.countdown()">Start</button>
+      <button class="btn btn-success" id="timerStart" ng-click="showme=true; TimerFactory.countdown()" >Start</button>
       <hr>
+      <div ng-hide="showme">
+        <h1>Rules</h1>
+        <ul>
+          <li>Click and drag to select flames.</li>
+          <li>Connect strings of two or more consecutive flames to get points.</li>
+          <li>Connect flames in a square shape to clear all flames of that color on the board and get a 2X bonus.</li>
+          <li>After 30s the board will refresh and increase by a space.</li>
+          <li>After you earn 50 points the board will shrink by a space.</li>
+
+        </ul>
+        
+        <h3>To Win</h3>
+        <p>Reduce the size of the board to 5x5 and clear it.</p>
+
+        <h3>To Lose</h3>
+        <p>Let the board grow to a 15 x 15 grid.</p>
+      </div>
+
+
       <div class="col-xs-7">
         <div ng-show="showme">
           <table>
@@ -48,10 +67,10 @@
           <div>
             <h1>Current Score: {{TimerFactory.score}}</h1>
           </div>
-        </div>
-      </div>
       <div class="col-xs-5">
         <div class="timer" data-timer = "30"></div>
+      </div>
+        </div>
       </div>
     </div>
 

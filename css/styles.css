@@ -11,6 +11,6 @@ img {
 body {
   background-color: black;
 }
-h1 {
+h1, li, p, h3 {
   color: white;
 }
