@@ -24,15 +24,16 @@
     <audio id="scoreSound2" src="sounds/levelup.wav"></audio>
     <audio id="squareScore" src="sounds/bubbling.wav"></audio>
     <audio id="soundTrack" src="sounds/coastal.mp3"></audio>
-    <h1><img src="images/logo2.gif"></img></h1>
+    <!-- <h1><img src="images/logo2.gif"></img></h1> -->
+    <h1 class="animated slideInRight" style="font-size:400%;">Circle and Squares of Doom</h1>
     <div ng-controller="BoardCtrl">
-      <button class="btn btn-warning" ng-click="TimerFactory.playSoundtrack()" name="Music">Music</button>
+      <button class="btn btn-warning animated slideInLeft" ng-click="TimerFactory.playSoundtrack()" name="Music">Music</button>
 
-      <button class="btn btn-success" id="timerStart" ng-click="showme=true; TimerFactory.countdown()" >Start</button>
+      <button class="btn btn-success animated slideInLeft" id="timerStart" ng-click="showme=true; TimerFactory.countdown()" >Start</button>
       <hr>
       <div ng-hide="showme">
-        <h1>Rules</h1>
-        <ul>
+        <h1 class="animated lightSpeedIn">Rules</h1>
+        <ul class="animated slideInLeft">
           <li>Click and drag to select flames.</li>
           <li>Connect strings of two or more consecutive flames to get points.</li>
           <li>Connect flames in a square shape to clear all flames of that color on the board and get a 2X bonus.</li>
@@ -40,12 +41,12 @@
           <li>After you earn 50 points the board will shrink by a space.</li>
 
         </ul>
-        
-        <h3>To Win</h3>
-        <p>Reduce the size of the board to 5x5 and clear it.</p>
 
-        <h3>To Lose</h3>
-        <p>Let the board grow to a 15 x 15 grid.</p>
+        <h3 class="animated slideInRight">To Win</h3>
+        <p class="animated slideInLeft">Reduce the size of the board to 5x5 and clear it.</p>
+
+        <h3 class="animated slideInRight">To Lose</h3>
+        <p class="animated slideInLeft">Let the board grow to a 15 x 15 grid.</p>
       </div>
 
 
